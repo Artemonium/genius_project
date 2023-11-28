@@ -1,12 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <title>Beauty Zone</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Шапка, то что будет на всех страницах -->
+    <header>
+      <!-- Навигация + логотип -->
+      <nav>
+        <!-- <a> используется для ссылок, а вложенный <img> представляет собой визуальную сторону єтой ссылки -->
+        <a href="./index.html"
+          ><img
+            src="./images/logo.svg"
+            alt="Логотип компанії"
+        /></a>
+        <!-- <ul> представляет собой немаркированній список однотипных элементов, в данном случае - кнопок навигации -->
+        <ul>
+          <!-- href атрибут отвечает для сорс и якоря -->
+          <li><a href="#about-section">Про нас</a></li>
+          <li><a href="#whywe-section">Чому ми</a></li>
+          <li>
+            <a href="#procedures-section"
+              >Наші процедури
+            </a>
+          </li>
+          <li><a href="#contacts-section">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Основное, уникальный контент, который отличается от страницы к странице -->
+    <main>
+      <!-- <section> отвечают за разные части страницы и делят контент -->
+      <section>
+        <!-- первый блок с заголовком -->
+        <p>Косметологічна клініка</p>
+        <!-- <h1> представляет из себя самый главный заголовок по странице -->
+        <h1>Beauty Zone</h1>
+        <!-- <button> используется для утображения кнопок и дополняется тегом type -->
+        <button type="button">Замовити дзвінок</button>
+        <!-- <p> тег отвечающий за обычный абзац текста -->
+        <p>
+          Запишись та отримай безкоштовну консультацію
+          нашого косметолога
+        </p>
+      </section>
+      <!-- атрибут id помагает закрепить за секцией свой адрес и ссылаться на него -->
+      <section id="about-section">
+        <!-- <h2> тег заголовка 2-го уровня -->
+        <!-- <span> отметка для будущего форматирования текста -->
+        <h2>Перевтілюйтесь в <span>Beauty Zone!</span></h2>
+        <p>
+          Наша косметологічна клініка пропонує вам
+          професійні послуги з догляду за шкірою обличчя та
+          тіла.
+        </p>
+        <p>
+          B <span>beauty zone</span> ми гарантуємо найвищі
+          стандарти якості та приємний сервіс. Наші
+          косметологічні процедури та препарати допоможуть
+          вам підтримувати свою красу та молодість. З нами
+          краса назавжди!
+        </p>
+      </section>
+      <section id="whywe-section">
+        <h2>Чому люди <span>обирають нас</span></h2>
+        <!-- <article> тег который обозначает отделённый друг от друга самодстаточный контент -->
+        <article>
+          <img src="#" alt="Іконка атома" />
+          <p>
+            Всі наші косметологи мають вищу медичну освіту
+            та стаж роботи від 5 років
+          </p>
+        </article>
+        <article>
+          <img src="#" alt="Іконка косметики" />
+          <p>
+            Використовуємо тільки професійне обладнання та
+            косметику, перевірену часом
+          </p>
+        </article>
+        <article>
+          <img src="#" alt="Іконка корона" />
+          <p>
+            Наша мета - підкреслити переваги та приховати
+            недоліки, а не переробити
+          </p>
+        </article>
+      </section>
+      <section id="#procedures-section">
+        <h2>Наші <span>процедури</span></h2>
+        <article id="mask-image">
+          <img src="./images/процедуры де..svg" alt="" />
+        </article>
+        <article id="injection-image">
+          <img src="./images/процедуры 2.svg" alt="" />
+        </article>
+        <article id="pilling-image">
+          <!-- картинка разбита на несколько элемнетов, есть маска и шейпер -->
+          <img src="./images/процедуры 3.svg" alt="" />
+        </article>
+        <nav>
+          <!-- навигация между страницами с фото -->
+          <a href="#mask-image">
+            <img
+              src="./images/Ellipse.svg"
+              alt="кнопка перемикання, сторінка 1"
+            />
+          </a>
+          <a href="#mask-image">
+            <img
+              src="./images/Ellipse.svg"
+              alt="кнопка перемикання, сторінка 2"
+            />
+          </a>
+          <a href="#mask-image">
+            <img
+              src="./images/Ellipse.svg"
+              alt="кнопка перемикання, сторінка 3"
+            />
+          </a>
+        </nav>
+      </section>
+      <section id="contacts-section">
+        <h2>Як нас <span>знайти</span></h2>
+        <!-- вложенные фреймы реализуются посредством тега <iframe> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325719461126!2d30.5181753!3d50.4423566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1701174729946!5m2!1sru!2sua"
+          width="605"
+          height="481"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <!-- форма заполенения с кнопкой -->
+      </section>
+    </main>
+    <!-- Подвал, зачастую содержит контактные данные и т.п. -->
+    <footer>
+      <nav>
+        <!-- <a> используется для ссылок, а вложенный <img> представляет собой визуальную сторону єтой ссылки -->
+        <a href="./index.html"
+          ><img
+            src="./images/logo.svg"
+            alt="Логотип компанії"
+        /></a>
+        <!-- <ul> представляет собой немаркированній список однотипных элементов, в данном случае - кнопок навигации -->
+        <ul>
+          <!-- href атрибут отвечает для сорс и якоря -->
+          <li><a href="#about-section">Про нас</a></li>
+          <li><a href="#whywe-section">Чому ми</a></li>
+          <li>
+            <a href="#procedures-section"
+              >Наші процедури
+            </a>
+          </li>
+          <li><a href="#contacts-section">Контакти</a></li>
+        </ul>
+        <address>
+          <ul>
+            <li>
+              <a id="call" href="tel:+380960000007"
+                >+ 38 (096) 000 00 07</a
+              >
+            </li>
+            <li>
+              <a href="mailto:beautyzone@gmail.com"
+                >beautyzone@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                >Україна, м. Київ, бул. Тараса Шевченка 5</a
+              >
+            </li>
+            <li>
+              <a href="#call">
+                <!-- phone icon -->
+                <img
+                  src="./images/phone.png"
+                  alt="іконка телефону"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://uk-ua.facebook.com/"
+                target="_blank"
+              >
+                <!-- facebook icon -->
+                <img
+                  src="./images/uit_facebook-f.png"
+                  alt="іконка фейсбук"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <!-- instagram icon -->
+                <img
+                  src="./images/ph_instagram-logo-light.png"
+                  alt="іконка інстаграм"
+                />
+              </a>
+            </li>
+          </ul>
+          <a href="#" target="_blank"
+            >Політика конфіденційності</a
+          >
+          <p>&copy; 2023 Дані захищені</p>
+        </address>
+      </nav>
+    </footer>
+  </body>
 </html>
