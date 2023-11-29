@@ -1,0 +1,13 @@
+.main-button {
+    background-color: #2B7FFF;
+    color: #FFFFFF;
+    border: 2px solid #2B7FFF;
+    border-radius: 32px;
+}
+
+.main-button:hover {
+    border: 2px solid #2B7FFF;
+    background-color: transparent;
+    border-radius: 32px;
+    color: #011C44;
+}
