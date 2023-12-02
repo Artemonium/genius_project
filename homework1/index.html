@@ -21,33 +21,45 @@
             alt="Логотип компанії"
         /></a>
         <!-- <ul> представляет собой немаркированній список однотипных элементов, в данном случае - кнопок навигации -->
-        <ul>
+        <ul class="links">
           <!-- href атрибут отвечает для сорс и якоря -->
-          <li><a href="#about-section">Про нас</a></li>
-          <li><a href="#whywe-section">Чому ми</a></li>
           <li>
-            <a href="#procedures-section"
+            <a class="links" href="#about-section"
+              >Про нас</a
+            >
+          </li>
+          <li>
+            <a class="links" href="#whywe-section"
+              >Чому ми</a
+            >
+          </li>
+          <li>
+            <a class="links" href="#procedures-section"
               >Наші процедури
             </a>
           </li>
-          <li><a href="#contacts-section">Контакти</a></li>
+          <li>
+            <a class="links" href="#contacts-section"
+              >Контакти</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
     <!-- Основное, уникальный контент, который отличается от страницы к странице -->
     <main>
-      <!-- <section> отвечают за разные части страницы и делят контент -->
+      <!-- <section> отвечают за разные части страницы и делят контент семантически -->
       <section>
         <!-- первый блок с заголовком -->
         <p>Косметологічна клініка</p>
         <!-- <h1> представляет из себя самый главный заголовок по странице -->
-        <h1>Beauty Zone</h1>
+        <h1 class="hero-title">Beauty Zone</h1>
         <!-- <button> используется для утображения кнопок и дополняется тегом type -->
         <button class="main-button" type="button">
           Замовити дзвінок
         </button>
         <!-- <p> тег отвечающий за обычный абзац текста -->
-        <p>
+        <p class="button-under-text">
           Запишись та отримай безкоштовну консультацію
           нашого косметолога
         </p>
@@ -56,47 +68,65 @@
       <section id="about-section">
         <!-- <h2> тег заголовка 2-го уровня -->
         <!-- <span> отметка для будущего форматирования текста -->
-        <h2>Перевтілюйтесь в <span>Beauty Zone!</span></h2>
-        <p>
+        <h2 class="section-title left">
+          Перевтілюйтесь в
+          <span class="accent">Beauty Zone!</span>
+        </h2>
+        <p class="about-section-item">
           Наша косметологічна клініка пропонує вам
           професійні послуги з догляду за шкірою обличчя та
           тіла.
         </p>
-        <p>
-          B <span>beauty zone</span> ми гарантуємо найвищі
-          стандарти якості та приємний сервіс. Наші
-          косметологічні процедури та препарати допоможуть
-          вам підтримувати свою красу та молодість. З нами
-          краса назавжди!
+        <p class="about-section-item">
+          B <span class="accent">beauty zone</span> ми
+          гарантуємо найвищі стандарти якості та приємний
+          сервіс. Наші косметологічні процедури та препарати
+          допоможуть вам підтримувати свою красу та
+          молодість. З нами краса назавжди!
         </p>
       </section>
       <section id="whywe-section">
-        <h2>Чому люди <span>обирають нас</span></h2>
+        <h2 class="section-title">
+          Чому люди
+          <span class="accent">обирають нас</span>
+        </h2>
         <!-- <article> тег который обозначает отделённый друг от друга самодстаточный контент -->
         <article>
-          <img src="#" alt="Іконка атома" />
-          <p>
+          <img
+            src="./images/game-icons_materials-science.png"
+            alt="Іконка атома"
+          />
+          <p class="whywe-section-item">
             Всі наші косметологи мають вищу медичну освіту
             та стаж роботи від 5 років
           </p>
         </article>
         <article>
-          <img src="#" alt="Іконка косметики" />
-          <p>
+          <img
+            src="./images/Group 46194.png"
+            alt="Іконка косметики"
+          />
+          <p class="whywe-section-item">
             Використовуємо тільки професійне обладнання та
             косметику, перевірену часом
           </p>
         </article>
         <article>
-          <img src="#" alt="Іконка корона" />
-          <p>
+          <img
+            src="./images/ph_crown-light.png"
+            alt="Іконка корона"
+          />
+          <p class="whywe-section-item">
             Наша мета - підкреслити переваги та приховати
             недоліки, а не переробити
           </p>
         </article>
       </section>
       <section id="procedures-section">
-        <h2>Наші <span>процедури</span></h2>
+        <h2 class="section-title">
+          Наші
+          <span class="accent">процедури</span>
+        </h2>
         <article id="mask-image">
           <img src="./images/процедуры де..svg" alt="" />
         </article>
@@ -130,7 +160,10 @@
         </nav>
       </section>
       <section id="contacts-section">
-        <h2>Як нас <span>знайти</span></h2>
+        <h2 class="section-title">
+          Як нас
+          <span class="accent">знайти</span>
+        </h2>
         <!-- вложенные фреймы реализуются посредством тега <iframe> -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325719461126!2d30.5181753!3d50.4423566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1701174729946!5m2!1sru!2sua"
@@ -156,34 +189,56 @@
         <!-- <ul> представляет собой немаркированній список однотипных элементов, в данном случае - кнопок навигации -->
         <ul>
           <!-- href атрибут отвечает для сорс и якоря -->
-          <li><a href="#about-section">Про нас</a></li>
-          <li><a href="#whywe-section">Чому ми</a></li>
           <li>
-            <a href="#procedures-section"
+            <a class="links footer" href="#about-section"
+              >Про нас</a
+            >
+          </li>
+          <li>
+            <a class="links footer" href="#whywe-section"
+              >Чому ми</a
+            >
+          </li>
+          <li>
+            <a
+              class="links footer"
+              href="#procedures-section"
               >Наші процедури
             </a>
           </li>
-          <li><a href="#contacts-section">Контакти</a></li>
+          <li>
+            <a class="links footer" href="#contacts-section"
+              >Контакти</a
+            >
+          </li>
         </ul>
         <address>
           <ul>
             <li>
-              <a id="call" href="tel:+380960000007"
+              <a
+                class="address-item"
+                id="call"
+                href="tel:+380960000007"
                 >+ 38 (096) 000 00 07</a
               >
             </li>
             <li>
-              <a href="mailto:beautyzone@gmail.com"
+              <a
+                class="address-item"
+                href="mailto:beautyzone@gmail.com"
                 >beautyzone@gmail.com</a
               >
             </li>
             <li>
-              <a href="#" target="_blank"
+              <a
+                class="address-item"
+                href="#"
+                target="_blank"
                 >Україна, м. Київ, бул. Тараса Шевченка 5</a
               >
             </li>
             <li>
-              <a href="#call">
+              <a class="address-item" href="#call">
                 <!-- phone icon -->
                 <img
                   src="./images/phone.png"
@@ -216,10 +271,10 @@
               </a>
             </li>
           </ul>
-          <a href="#" target="_blank"
+          <a class="address-item" href="#" target="_blank"
             >Політика конфіденційності</a
           >
-          <p>&copy; 2023 Дані захищені</p>
+          <p class="copyright">&copy; 2023 Дані захищені</p>
         </address>
       </nav>
     </footer>

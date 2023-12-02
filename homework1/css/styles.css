@@ -1,13 +1,162 @@
+/* CSS Container */
+/* Fonts */
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/play-v19-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/play-v19-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2');
+}
+
+:root {
+    /* Переменные цветов для сайта, на которые можно ссылаться */
+   --color-brand-light: #2B7FFF;
+   --color-brand-dark: #011C44;
+   --color-text-regular: #000000;
+}
+
+/* Base */
+body {
+    /* Настройка базового шрифта */
+    font-family: Roboto, sans-serif;
+        font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    /* Цвет основного текста */
+    color: var(--color-brand-dark);
+}
+
+
+/* Header */
+    /* Hero title */
+.hero-title {
+    font-family: Play, sans-serif;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 0.8;
+    color: var(--color-brand-light);
+}
+
+ul {
+    /* Отключаем точки маркировки */
+    list-style-type: none;
+}
+
+    /* Links */
+.links {
+    /* Отключаем подчёркивание текста в ссылках */
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color-brand-dark);
+}
+
+.links:hover {
+    font-weight: 700;
+    color: var(--color-brand-light);
+}
+
+    /* Button */
 .main-button {
-    background-color: #2B7FFF;
+    background-color: var(--color-brand-light);
     color: #FFFFFF;
-    border: 2px solid #2B7FFF;
+    font-weight: 600;
+    line-height: 1.2;
+    border: 2px solid var(--color-brand-light);
     border-radius: 32px;
+    cursor: pointer;
 }
 
 .main-button:hover {
-    border: 2px solid #2B7FFF;
+    font-weight: 600;
+    line-height: 1.2;
     background-color: transparent;
-    border-radius: 32px;
-    color: #011C44;
+    color: var(--color-brand-dark)
+}
+
+.button-under-text {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #4A4A4A;
+}
+
+/* Main */
+    /* Sections common */
+.section-title {
+    font-family: Play, sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.section-title.left {
+    text-align-last: left;
+}
+
+.section-title .accent {
+color: var(--color-brand-light);
+}
+
+    /* About section */
+.about-section-item {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.about-section-item .accent {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+    /* Why We section */
+.whywe-section-item {
+    counter-reset: var(--color-text-regular);
+    text-align: center;
+}
+
+/* Footer */
+
+.address-item {
+    /* Отключение подчёркиваний и наклонного текста в строке адрессных данных (умолчаний) */
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.links.footer {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.copyright {
+    color: #747272;
+    font-size: 13px;
 }
