@@ -43,6 +43,7 @@
   --color-text-regular: #000000;
 }
 
+/* Задаём вычисление размеров элемента */
 * {
   box-sizing: border-box;
 }
