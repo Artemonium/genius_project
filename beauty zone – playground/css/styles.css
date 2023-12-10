@@ -1,0 +1,239 @@
+/* Fonts */
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2")
+    format("woff2");
+}
+
+/* ROOT */
+:root {
+  /* набор брендовых цветов */
+  --color-brand-light: #2b7fff;
+  --color-brand-dark: #011c44;
+  --color-text-regular: #000000;
+}
+
+/* Задаём вычисление размеров элемента */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  /* +2 padding по 24px слева и справа 1240+48=1288px */
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+body {
+  /* Настройка базового шрифта */
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  /* Цвет основного текста */
+  color: var(--color-brand-dark);
+}
+ul {
+  list-style-type: none;
+}
+
+.header-nav-item {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-brand-dark);
+}
+
+.footer-nav-item {
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* Настройка отступов сверху */
+  margin-top: 0;
+}
+
+.section-header {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-title-accent {
+  color: var(--color-brand-light);
+}
+
+/* HEADER */
+/* Navigation */
+.header-nav-container {
+  /* display: inline-flex; */
+  width: 100%;
+  max-width: 1239px;
+  height: 100%;
+  max-height: 42px;
+  padding: 32px 103px 32px 99px;
+  margin: 0;
+}
+
+.header-nav-item:hover {
+  font-weight: 700;
+  color: var(--color-brand-light);
+}
+/* TITLE SECTION */
+.title-section {
+  padding-bottom: 126.48px;
+}
+.title-overtext {
+}
+
+.hero-title {
+  width: 100%;
+  max-width: 529px;
+  height: 100%;
+  max-height: 228px;
+  font-family: play, sans-serif;
+  font-size: 140px;
+  text-transform: capitalize;
+  color: var(--color-brand-light);
+  line-height: 0.8;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.call-order-button {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 32px;
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  cursor: pointer;
+  padding: 16px 32px;
+  margin-bottom: 14px;
+}
+
+.call-order-button:hover {
+  color: var(--color-brand-dark);
+  background-color: transparent;
+}
+
+.title-undertext {
+  font-size: 12px;
+  text-align: center;
+  width: 238px;
+  height: 36px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding-bottom: 176px;
+}
+
+.section-header.about {
+  width: 100%;
+  max-width: 529px;
+  height: 100%;
+  min-height: 148px;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.about-section-text {
+  width: 100%;
+  max-width: 709px;
+  font-size: 22px;
+  line-height: 1.7;
+}
+.about-section-text.two {
+  margin-bottom: 0;
+}
+
+.about-section-text-accent {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* WHY WE SECTION */
+.section-header.whywe {
+  width: 100%;
+  width: 450px;
+  height: 100%;
+  height: 148px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+}
+.whywe-section {
+  padding-bottom: 96px;
+}
+
+.whywe-section-cards {
+}
+
+.whywe-section-item {
+  line-height: 1.3;
+}
+
+/* PROCEDURES SECTION */
+.procedures-section {
+  padding-bottom: 96px;
+}
+
+/* CONTACTS SECTION */
+.contacts-section {
+  padding-bottom: 96px;
+}
+.contacts-section-header {
+  margin-bottom: 48px;
+}
+
+/* FOOTER SECTION */

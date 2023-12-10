@@ -1,0 +1,395 @@
+/* Fonts - розділ для підключення шрифтів */
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2")
+    format("woff2");
+}
+
+/* ROOT -кореневий розділ для глобальних налаштувань */
+
+* {
+  /* Формат розрахунку загального розміру елементів */
+  box-sizing: border-box;
+}
+
+:root {
+  /*  Набір брендових кольорів */
+  --color-brand-light: #2b7fff;
+  --color-brand-dark: #011c44;
+  --color-text-regular: #000000;
+}
+
+.container {
+  /* Налаштування контейнерів які містять у собі весь контент сайту */
+  width: 100%;
+  /* Базова ширина 1240px +2 padding по 24px зліва і справа 1240+48=1288px */
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+body {
+  /* Налаштування базового шрифта сторінки */
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  /* Налаштування кольору основного тексту */
+  color: var(--color-brand-dark);
+}
+
+ul {
+  /* Налаштування списків */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* Видалення відступів зверху для заголовків та тексту (щоб не було випадання або схлопування */
+  margin-top: 0;
+}
+
+.section-title {
+  /* Налаштування для усіх заголовків секцій */
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-title-accent {
+  /* Налаштування акценту для заголовків секцій */
+  color: var(--color-brand-light);
+}
+
+.header-nav-list-item-text {
+  /* Налаштування елементів списку у хедері */
+  /* Прибираємо маркування списку */
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-brand-dark);
+}
+
+.header-nav-list-item-text:hover {
+  /* Задаємо стиль для посилань хедеру при наведенні на них курсору */
+  font-weight: 700;
+  color: var(--color-brand-light);
+}
+
+.footer-nav-list-item-text {
+  /* Налаштування елементів списку у футері */
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* HEADER */
+
+/* .container.header {
+  background-image: url("../images/Rectangle\ 5082.png");
+} */
+
+.flex-container-header {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-header {
+  display: flex;
+  /* Розтягуємо увесь контент хедеру по довжині flex-контейнера */
+  flex-grow: 1;
+  /* Ствоюємо відступ для елементів хедеру, щоб при зменшенні екрану контент 
+  не притипав один до одного так як, наприклад,
+   логотип - посилання навігації - іконки */
+  gap: 40px;
+  padding: 32px 0;
+}
+
+/* Текстові посилання */
+
+.header-nav-list {
+  display: flex;
+  /* Вирівнюємо контент відносно верху і низу контейнеру */
+  align-items: center;
+  flex-grow: 1;
+  /* Властивість gap - дозволяє додати відступи для елементів накшталт margin-right */
+  gap: 64px;
+  /* Розприділяємо контент посередині відносно лівої і правої частини контейнеру*/
+  justify-content: center;
+}
+
+/* Іконки у шапці */
+
+.header-nav-list-images {
+  display: flex;
+  align-items: center;
+  /* Додаємо кнопки в кінець контейнеру */
+  justify-content: end;
+  gap: 36px;
+}
+
+/* TITLE SECTION */
+
+/* Додаємо фонове зображення до обраної секції */
+.container.herotitle {
+  background-image: url("../images/header_title_bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
+.title-section {
+  /* Загальний відступ для секції "Title" від секції "About" */
+  padding-bottom: 126.48px;
+}
+
+/* Uptext */
+
+.title-section-uptext {
+  /* Відступ між uptext та herotitle */
+  margin-bottom: 16px;
+  margin-top: 39.66px;
+}
+
+/* Hero Title */
+
+.title-section-herotitle {
+  /* Налаштування Заголовку */
+  font-family: play, sans-serif;
+  font-size: 140px;
+  text-transform: capitalize;
+  color: var(--color-brand-light);
+  line-height: 0.8;
+  margin-bottom: 40px;
+  max-width: 529px;
+}
+
+/* Button */
+
+.title-section-button {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 32px;
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  cursor: pointer;
+  padding: 16px 32px;
+  margin-bottom: 14px;
+}
+
+.title-section-button:hover {
+  /* Налаштування кнопки при наведенні курсору */
+  color: var(--color-brand-dark);
+  background-color: transparent;
+}
+
+/* Downtext */
+
+.title-section-downtext {
+  font-size: 12px;
+  max-width: 238px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding-bottom: 176px;
+}
+
+.flex-container-about {
+  display: flex;
+  /* Розташовуємо контент по різні сторони сторінки */
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Text obj */
+
+.flex-container-about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title.about {
+  /* Унікальні налаштування для заголовку зі зміщення вліво*/
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-top: 41px;
+  max-width: 529px;
+}
+
+.about-section-text {
+  font-size: 22px;
+  max-width: 700px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.about-section-text-accent {
+  /* Налаштування акценту */
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Image obj */
+
+.flex-container-about-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.flex-container-about-images-item {
+  box-shadow: 0px 4px 4px 0px #a8c6f533;
+  border-radius: 164px;
+}
+
+/* WHY SECTION */
+
+.flex-container-why {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 96px;
+}
+
+.flex-container-why-title {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title.why {
+  max-width: 450px;
+}
+
+.flex-container-why-text {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.why-section-cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  justify-content: center;
+}
+
+.why-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 316px;
+  border-radius: 32px;
+  padding: 24px 32px;
+  box-shadow: 0px 4px 4px 0px #a8c6f561;
+}
+
+.why-section-card-text {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.why-section-card-image {
+  margin-bottom: 8px;
+}
+
+/* PROCEDURES SECTION */
+
+.flex-container-procedures {
+  padding-bottom: 96px;
+}
+
+.procedures-section-cardlist {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.procedures-section-card {
+  width: 344px;
+  height: 456px;
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+.procedure-image {
+  border-radius: 4px 120px 4px 120px;
+  background: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    #011c44 101.39%
+  );
+}
+
+/* FIND SECTION */
+
+.flex-container-find {
+  padding: 0 113px 96px 76px;
+}
+
+/* FOOTER SECTION */
+
+.footer-section {
+  background-color: var(--color-brand-dark);
+}
+
+.flex-container-footer {
+  margin: 56px 0;
+}
+
+.copyright {
+  font-size: 13px;
+}
+
+/* Закінчив флекс контейнер Чому ми та розміщення у ньому елементів */
