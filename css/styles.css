@@ -38,8 +38,7 @@
 /* ROOT -кореневий розділ для глобальних налаштувань */
 
 * {
-  /* Формат розрахунку загального розміру елементів */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Формат розрахунку загального розміру елементів */
 }
 
 :root {
@@ -47,6 +46,7 @@
   --color-brand-light: #2b7fff;
   --color-brand-dark: #011c44;
   --color-text-regular: #000000;
+  --color-icon-regular: #ffffff;
 }
 
 .container {
@@ -59,14 +59,20 @@
 }
 
 body {
-  /* Налаштування базового шрифта сторінки */
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Налаштування базового шрифта сторінки */
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.3;
-  /* Налаштування кольору основного тексту */
-  color: var(--color-brand-dark);
+  line-height: 1.3; /* Висота строки визначається співвідношенням висоти строки до розміру шрифту */
+  color: var(
+    --color-brand-dark
+  ); /* Налаштування кольору основного тексту */
+}
+
+.nav-icons {
+  fill: var(
+    --color-icon-regular
+  ); /* Визначає колір заливки svg-елемента */
 }
 
 ul {
@@ -104,9 +110,8 @@ p {
 
 .header-nav-list-item-text {
   /* Налаштування елементів списку у хедері */
-  /* Прибираємо маркування списку */
-  text-decoration: none;
-  font-style: normal;
+  text-decoration: none; /* Прибираємо маркування списку */
+  font-style: normal; /* Прибираємо нахилений (italic) стиль шрифту */
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
@@ -142,8 +147,7 @@ p {
 
 .navigation-header {
   display: flex;
-  /* Розтягуємо увесь контент хедеру по довжині flex-контейнера */
-  flex-grow: 1;
+  flex-grow: 1; /* Розтягуємо увесь контент хедеру по довжині flex-контейнера */
   /* Ствоюємо відступ для елементів хедеру, щоб при зменшенні екрану контент 
   не притипав один до одного так як, наприклад,
    логотип - посилання навігації - іконки */
@@ -155,13 +159,10 @@ p {
 
 .header-nav-list {
   display: flex;
-  /* Вирівнюємо контент відносно верху і низу контейнеру */
-  align-items: center;
+  align-items: center; /* Вирівнюємо контент відносно верху і низу контейнеру */
   flex-grow: 1;
-  /* Властивість gap - дозволяє додати відступи для елементів накшталт margin-right */
-  gap: 64px;
-  /* Розприділяємо контент посередині відносно лівої і правої частини контейнеру*/
-  justify-content: center;
+  gap: 64px; /* Властивість gap - дозволяє додати відступи для елементів накшталт margin-right */
+  justify-content: center; /* Розприділяємо контент посередині відносно лівої і правої частини контейнеру*/
 }
 
 /* Іконки у шапці */
@@ -169,8 +170,7 @@ p {
 .header-nav-list-images {
   display: flex;
   align-items: center;
-  /* Додаємо кнопки в кінець контейнеру */
-  justify-content: end;
+  justify-content: end; /* Додаємо кнопки в кінець контейнеру */
   gap: 36px;
 }
 
@@ -185,8 +185,7 @@ p {
 }
 
 .title-section {
-  /* Загальний відступ для секції "Title" від секції "About" */
-  padding-bottom: 126.48px;
+  padding-bottom: 126.48px; /* Загальний відступ для секції "Title" від секції "About" */
 }
 
 /* Uptext */
@@ -218,8 +217,8 @@ p {
   font-size: 18px;
   border-radius: 32px;
   background-color: var(--color-brand-light);
-  border: 2px solid var(--color-brand-light);
-  cursor: pointer;
+  border: 2px solid var(--color-brand-light); /* Додаємо видимі границі кнопки */
+  cursor: pointer; /* Строка відповідає за відображення курсору при наведенні */
   padding: 16px 32px;
   margin-bottom: 14px;
 }
@@ -235,7 +234,7 @@ p {
 .title-section-downtext {
   font-size: 12px;
   max-width: 238px;
-  text-align: center;
+  text-align: center; /* Вирівнювання тексту у межах свого елементу */
   margin-bottom: 0;
 }
 
@@ -246,8 +245,7 @@ p {
 
 .flex-container-about {
   display: flex;
-  /* Розташовуємо контент по різні сторони сторінки */
-  justify-content: space-between;
+  justify-content: space-between; /* Розташування об'єктів за принципом пустого місця між ними */
   gap: 32px;
 }
 
@@ -255,7 +253,7 @@ p {
 
 .flex-container-about-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Напрямок розташування (у стовпчик) об'єктів у флекс контейнері */
 }
 
 .section-title.about {
@@ -370,6 +368,28 @@ p {
     rgba(1, 28, 68, 0.725825) 84.61%,
     #011c44 101.39%
   );
+}
+
+/* Carousel buttons */
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-brand-dark);
+  fill: var(--color-brand-dark);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  border-color: white;
+  background-color: var(--color-brand-light);
+  fill: white;
 }
 
 /* FIND SECTION */
