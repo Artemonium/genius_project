@@ -37,7 +37,9 @@
 
 /* ROOT -кореневий розділ для глобальних налаштувань */
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box; /* Формат розрахунку загального розміру елементів */
 }
 
@@ -93,6 +95,10 @@ p {
   margin-top: 0;
 }
 
+a {
+  display: inline-block; /* Такий параметр запобігає розтягуванню посилань у межах своїх блоків */
+}
+
 .section-title {
   /* Налаштування для усіх заголовків секцій */
   font-family: "Play", sans-serif;
@@ -132,6 +138,11 @@ p {
   font-size: 16px;
   line-height: 1.2;
   color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-nav-list-item-text:hover {
+  color: var(--color-brand-light);
 }
 
 /* HEADER */
@@ -272,6 +283,10 @@ p {
   margin-bottom: 40px;
 }
 
+.about-section-text:last-child {
+  margin-bottom: 0;
+}
+
 .about-section-text-accent {
   /* Налаштування акценту */
   font-weight: 600;
@@ -372,6 +387,14 @@ p {
 
 /* Carousel buttons */
 
+.carousel-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
 .carousel-button {
   display: flex;
   align-items: center;
@@ -384,6 +407,7 @@ p {
   fill: var(--color-brand-dark);
   background-color: transparent;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -395,21 +419,78 @@ p {
 /* FIND SECTION */
 
 .flex-container-find {
-  padding: 0 113px 96px 76px;
+  padding-bottom: 96px;
+}
+
+.container-find {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.find-section-map {
+  border-radius: 32px;
 }
 
 /* FOOTER SECTION */
 
 .footer-section {
+  padding: 56px 0;
   background-color: var(--color-brand-dark);
 }
 
-.flex-container-footer {
-  margin: 56px 0;
+.container.footer {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo-navigation {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-nav-list {
+  flex-basis: 50%;
+}
+
+.footer-nav-list-item {
+  margin-bottom: 16px;
+}
+
+.footer-nav-list-item.contacts {
+  margin-bottom: 0;
+}
+
+.footer-logo {
+  flex-basis: 50%;
+}
+
+.address-footer-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-address-confidential {
+  display: flex;
+  flex-basis: 50%;
+  gap: 186px;
+}
+
+.address-footer {
+  flex-basis: 50%;
+}
+
+.footer-confidencial {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
 }
 
 .copyright {
   font-size: 13px;
+  color: #747272;
+  margin-bottom: 0;
 }
 
 /* Закінчив флекс контейнер Чому ми та розміщення у ньому елементів */
