@@ -305,16 +305,15 @@
     </main>
     <!-- Виділяємо аналогічно до header'у нижню частину сайту -->
     <section class="footer-section">
-      <footer>
+      <footer class="footer">
         <div class="container footer">
           <nav class="footer-logo-navigation">
             <!-- Лого та посилання у футері -->
             <div class="footer-logo">
-              <a href="./index.html">
-                <img
-                  src="./images/logo.svg"
-                  alt="BeautyZone"
-              /></a>
+              <span class="footer-logo-text"
+                >Beauty <br />
+                Zone</span
+              >
             </div>
             <ul class="footer-nav-list">
               <li class="footer-nav-list-item">
@@ -376,6 +375,7 @@
               </ul>
               <ul class="address-footer-icons">
                 <li class="footer-address-list-icon">
+                  <!-- Додаємо іконку з набору svg-іконок, що були створені за допомогою відповідного сервісу -->
                   <svg
                     class="nav-icons"
                     width="42"
@@ -425,5 +425,15 @@
         </div>
       </footer>
     </section>
+    <!-- Додаткова секція для модального вікна -->
+    <div class="backdrop">
+      <div class="modal">
+        <button class="close-modal-button" type="button">
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- Підключення скріптів відбувається вкінці <body> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

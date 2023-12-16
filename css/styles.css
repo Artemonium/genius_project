@@ -191,7 +191,7 @@ a {
 .container.herotitle {
   background-image: url("../images/header_title_bg.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right;
   background-size: contain;
 }
 
@@ -321,12 +321,14 @@ a {
 }
 
 .section-title.why {
-  max-width: 450px;
+  max-width: 450px; /* Довжина задається для того, аби уникати зайвих тегів <br> у 
+  html-коді */
 }
 
 .flex-container-why-text {
   display: flex;
-  flex-grow: 1;
+  flex-grow: 1; /* Якщо немає інших елементів, то задає ширину області, що він займає
+  у розмірі 100% */
   justify-content: space-around;
 }
 
@@ -366,13 +368,17 @@ a {
 .procedures-section-cardlist {
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Налаштовує перенесення контенту при доданні нового,
+  або при звуження в'юбоксу */
 }
 
 .procedures-section-card {
   width: 344px;
   height: 456px;
-  flex-basis: calc((100% - 32px) / 3);
+  flex-basis: calc(
+    (100% - 32px) / 3
+  ); /* Поділяє наявну ширину флекс-боксу на 
+  ти рівнозначні частини, де 32px - це автоматичні маржини по 16px з двох сторін */
 }
 
 .procedure-image {
@@ -382,7 +388,7 @@ a {
     rgba(1, 28, 68, 0) 48.53%,
     rgba(1, 28, 68, 0.725825) 84.61%,
     #011c44 101.39%
-  );
+  ); /* Задає градієнт із прозорістю, що визначається дизайнером */
 }
 
 /* Carousel buttons */
@@ -402,9 +408,11 @@ a {
   padding: 0;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 50%; /* Округлює будь-який елемент */
   border: 1px solid var(--color-brand-dark);
-  fill: var(--color-brand-dark);
+  fill: var(
+    --color-brand-dark
+  ); /* Змінює колір заливки SVG-елементу */
   background-color: transparent;
   cursor: pointer;
   flex-shrink: 0;
@@ -451,11 +459,12 @@ a {
 }
 
 .footer-nav-list {
-  flex-basis: 50%;
+  flex-basis: 50%; /*  Задаємо місце, яке буде займати даний об'єкт у межах
+  батьківського флекс-боксу */
 }
 
 .footer-nav-list-item {
-  margin-bottom: 16px;
+  line-height: 1;
 }
 
 .footer-nav-list-item.contacts {
@@ -464,6 +473,14 @@ a {
 
 .footer-logo {
   flex-basis: 50%;
+}
+
+.footer-logo-text {
+  max-width: 84px;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-brand-light);
 }
 
 .address-footer-icons {
@@ -493,4 +510,58 @@ a {
   margin-bottom: 0;
 }
 
-/* Закінчив флекс контейнер Чому ми та розміщення у ньому елементів */
+footer {
+  display: flex;
+  position: relative; /* Точка відносно якої буде відбуватися позиционування
+  наступного елементу (footer::after) */
+}
+
+footer::after {
+  /* Додаємо в кінець футеру зображення із засобами для догляду */
+  content: "";
+  width: 247px;
+  height: 152px;
+  position: absolute; /* дозволяє вийняти контент з контексту та рухати
+   його відносно найближчого єлемента з відображенням, що не є static */
+  background-image: url(../images/chemicals.png);
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: -56px; /* Зміщення відбувається через наявність паддінгів у секції футеру */
+}
+
+/* Modal window */
+
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  /* Розтягуємо на все вікно затемнення екрану та фон */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #011f4a66;
+}
+
+.backdrop.is-hidden {
+  opacity: 0; /* Додає прозорість */
+  visibility: hidden; /* Візуально приховує контент */
+  pointer-events: none; /* Відключає взаємодію курсору з контентом */
+}
+
+.modal {
+  position: relative;
+  width: 723px;
+  height: 681px;
+  background-color: #011c44;
+  border-radius: 48px;
+}
+
+.close-modal-button {
+  position: absolute;
+  right: 42px;
+  top: 42px;
+}
+
+/* Встановлено модальне вікно та його першочерговий функціонал */
