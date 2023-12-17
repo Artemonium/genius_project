@@ -199,10 +199,6 @@ header {
   left: 0;
 }
 
-header::before {
-  /* Встановлюємо зображення фону для хедеру */
-}
-
 .flex-container-header {
   display: flex;
   flex-grow: 1;
