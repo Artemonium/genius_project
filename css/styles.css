@@ -62,7 +62,6 @@
 
 body {
   width: 100%;
-
   font-family: "Roboto", sans-serif; /* Налаштування базового шрифта сторінки */
   font-style: normal;
   font-weight: 400;
@@ -71,6 +70,7 @@ body {
   color: var(
     --color-brand-dark
   ); /* Налаштування кольору основного тексту */
+  margin: 0;
 }
 
 .nav-icons {
