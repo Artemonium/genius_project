@@ -61,6 +61,8 @@
 }
 
 body {
+  width: 100%;
+
   font-family: "Roboto", sans-serif; /* Налаштування базового шрифта сторінки */
   font-style: normal;
   font-weight: 400;
@@ -122,6 +124,8 @@ a {
   font-size: 18px;
   line-height: 1.2;
   color: var(--color-brand-dark);
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 .header-nav-list-item-text:hover {
@@ -139,6 +143,8 @@ a {
   line-height: 1.2;
   color: #ffffff;
   margin-bottom: 16px;
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 .footer-nav-list-item-text:hover {
@@ -147,23 +153,72 @@ a {
 
 /* HEADER */
 
-/* .container.header {
-  background-image: url("../images/Rectangle\ 5082.png");
-} */
+.container.header {
+  position: relative;
+  min-width: 1440px;
+  margin: auto;
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 106px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff40; /* Встановлюємо фон для секції */
+  backdrop-filter: blur(5px); /* Додаємо розмиття */
+  z-index: -9; /* Ставимо шарування перед фоновим зображенням */
+}
+
+.container.header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  width: 1129px;
+  height: 633px;
+  position: absolute;
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url("../images/header_title_bg.png");
+  background-repeat: no-repeat;
+  top: 0;
+  left: 311px;
+  z-index: -10;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+header::before {
+  /* Встановлюємо зображення фону для хедеру */
+}
 
 .flex-container-header {
   display: flex;
-  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .navigation-header {
   display: flex;
-  flex-grow: 1; /* Розтягуємо увесь контент хедеру по довжині flex-контейнера */
-  /* Ствоюємо відступ для елементів хедеру, щоб при зменшенні екрану контент 
-  не притипав один до одного так як, наприклад,
-   логотип - посилання навігації - іконки */
+  flex-basis: 1240px;
+  justify-content: space-around;
   gap: 40px;
   padding: 32px 0;
+}
+
+.header-logo {
+  display: flex;
 }
 
 /* Текстові посилання */
@@ -172,7 +227,7 @@ a {
   display: flex;
   align-items: center; /* Вирівнюємо контент відносно верху і низу контейнеру */
   flex-grow: 1;
-  gap: 64px; /* Властивість gap - дозволяє додати відступи для елементів накшталт margin-right */
+  gap: 56px; /* Властивість gap - дозволяє додати відступи для елементів накшталт margin-right */
   justify-content: center; /* Розприділяємо контент посередині відносно лівої і правої частини контейнеру*/
 }
 
@@ -181,21 +236,30 @@ a {
 .header-nav-list-images {
   display: flex;
   align-items: center;
-  justify-content: end; /* Додаємо кнопки в кінець контейнеру */
-  gap: 36px;
+  justify-content: center; /* Додаємо кнопки в кінець контейнеру */
+  gap: 32px;
+}
+
+.nav-icons {
+  fill: var(--color-text-regular);
 }
 
 /* TITLE SECTION */
 
 /* Додаємо фонове зображення до обраної секції */
-.container.herotitle {
+/* .container.herotitle {
   background-image: url("../images/header_title_bg.png");
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+} */
+
+.container.herotitle {
+  padding-left: 130px;
 }
 
 .title-section {
+  padding-top: 16px;
   padding-bottom: 126.48px; /* Загальний відступ для секції "Title" від секції "About" */
 }
 
@@ -204,7 +268,7 @@ a {
 .title-section-uptext {
   /* Відступ між uptext та herotitle */
   margin-bottom: 16px;
-  margin-top: 39.66px;
+  margin-top: 0;
 }
 
 /* Hero Title */
@@ -232,6 +296,10 @@ a {
   cursor: pointer; /* Строка відповідає за відображення курсору при наведенні */
   padding: 16px 32px;
   margin-bottom: 14px;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 .title-section-button:hover {
@@ -373,22 +441,31 @@ a {
 }
 
 .procedures-section-card {
+  position: relative;
   width: 344px;
   height: 456px;
   flex-basis: calc(
     (100% - 32px) / 3
   ); /* Поділяє наявну ширину флекс-боксу на 
   ти рівнозначні частини, де 32px - це автоматичні маржини по 16px з двох сторін */
-}
-
-.procedure-image {
-  border-radius: 4px 120px 4px 120px;
+  /* Задає градієнт із прозорістю, що визначається дизайнером */
   background: linear-gradient(
     180.05deg,
     rgba(1, 28, 68, 0) 48.53%,
     rgba(1, 28, 68, 0.725825) 84.61%,
     #011c44 101.39%
-  ); /* Задає градієнт із прозорістю, що визначається дизайнером */
+  );
+  border-radius: 4px 120px 4px 120px;
+  transition: transform 0.3s;
+}
+
+.procedures-section-card:hover {
+  transform: scale(1.025);
+}
+
+.procedure-image {
+  position: relative;
+  border-radius: 4px 120px 4px 120px;
 }
 
 /* Carousel buttons */
@@ -416,6 +493,12 @@ a {
   background-color: transparent;
   cursor: pointer;
   flex-shrink: 0;
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.carousel-button:last-child {
+  transform: rotate(0.5turn);
 }
 
 .carousel-button:hover {
@@ -514,6 +597,8 @@ footer {
   display: flex;
   position: relative; /* Точка відносно якої буде відбуватися позиционування
   наступного елементу (footer::after) */
+  max-width: 1488px;
+  margin: auto;
 }
 
 footer::after {
@@ -542,6 +627,8 @@ footer::after {
   left: 0;
   right: 0;
   background-color: #011f4a66;
+  padding: 20px;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
@@ -552,8 +639,10 @@ footer::after {
 
 .modal {
   position: relative;
-  width: 723px;
-  height: 681px;
+  width: 100%;
+  height: 100%;
+  max-width: 723px;
+  max-height: 681px;
   background-color: #011c44;
   border-radius: 48px;
 }
