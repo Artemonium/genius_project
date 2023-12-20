@@ -532,7 +532,7 @@ header {
 }
 
 .find-form {
-  padding: 42px 57px;
+  padding: 48px 57px;
   background-color: var(--color-brand-dark);
   color: var(--color-icon-regular);
   border-radius: 32px;
@@ -543,10 +543,6 @@ header {
   max-width: 310px;
   margin: 0 auto;
   margin-bottom: 16px;
-}
-
-.form-field.button.find {
-  margin-bottom: 8px;
 }
 
 /* FOOTER SECTION */
@@ -595,6 +591,10 @@ header {
 .address-footer-icons {
   display: flex;
   gap: 24px;
+}
+
+.nav-icons.footer {
+  fill: var(--color-icon-regular);
 }
 
 .footer-address-confidential {
@@ -680,6 +680,9 @@ footer::after {
   position: absolute;
   right: 42px;
   top: 42px;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
 }
 
 .title-modal {
@@ -712,7 +715,7 @@ footer::after {
 .form-field {
   color: var(--color-form-regular);
   max-width: 310px;
-  margin: 0 auto;
+  margin: 0 auto; /* Задаємо вирівнювання для усіх елементів форми */
   margin-bottom: 24px;
 }
 
@@ -725,7 +728,7 @@ footer::after {
 }
 
 .form-input {
-  padding: 18px 32.8px;
+  padding: 18px 32.85px;
   width: 100%;
   border: 2px solid var(--color-form-regular);
   border-radius: 32px;
@@ -747,6 +750,7 @@ footer::after {
 
 .form-field.button {
   max-width: 295px;
+  margin-bottom: 8px;
 }
 
 .form-submit-button {

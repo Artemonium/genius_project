@@ -359,7 +359,7 @@
                       placeholder="Ваша електронна пошта"
                     />
                   </div>
-                  <div class="form-field button find">
+                  <div class="form-field button">
                     <button
                       class="form-submit-button"
                       type="submit"
@@ -461,7 +461,7 @@
                 <li class="footer-address-list-icon">
                   <!-- Додаємо іконку з набору svg-іконок, що були створені за допомогою відповідного сервісу -->
                   <svg
-                    class="nav-icons"
+                    class="nav-icons footer"
                     width="42"
                     height="42"
                   >
@@ -472,7 +472,7 @@
                 </li>
                 <li class="footer-address-list-icon">
                   <svg
-                    class="nav-icons"
+                    class="nav-icons footer"
                     width="42"
                     height="42"
                   >
@@ -483,7 +483,7 @@
                 </li>
                 <li class="footer-address-list-icon">
                   <svg
-                    class="nav-icons"
+                    class="nav-icons footer"
                     width="42"
                     height="42"
                   >
@@ -513,7 +513,10 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="close-modal-button" type="button">
-          Close
+          <img
+            src="./images/cross.png"
+            alt="close the window"
+          />
         </button>
         <h2 class="title-modal">Замовити дзвінок</h2>
         <p class="modal-form-uptext">
@@ -523,18 +526,23 @@
           >
           та отримайте подарунок
         </p>
+        <!-- Створюємо форму, яка буде поєднувати у собі елементи <input>&<label> -->
         <form
           name="call-order"
           autocomplete="off"
           novalidate
         >
           <div class="form-field">
+            <!-- Label використовується задля зчитування браузером
+            зараз цей семантичний елемент приховано за допомогою класу .visually-hidden -->
             <label
               class="form-label visually-hidden"
               for="user-name"
             >
               Ваше ім'я та прізвище</label
             >
+            <!-- Input створює поле для заповнення з відповідним наповненням, 
+            що задається через атрибут type та поєднується з <label> за допомогою id -->
             <input
               class="form-input"
               type="text"
