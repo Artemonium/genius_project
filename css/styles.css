@@ -49,6 +49,7 @@
   --color-brand-dark: #011c44;
   --color-text-regular: #000000;
   --color-icon-regular: #ffffff;
+  --color-form-regular: #747272;
 }
 
 .container {
@@ -111,6 +112,17 @@ a {
   text-align: center;
 }
 
+/* Налаштування для прихованих елементів */
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .section-title-accent {
   /* Налаштування акценту для заголовків секцій */
   color: var(--color-brand-light);
@@ -155,7 +167,7 @@ a {
 
 .container.header {
   position: relative;
-  min-width: 1440px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -283,7 +295,7 @@ header {
 /* Button */
 
 .title-section-button {
-  color: #ffffff;
+  color: var(--color-icon-regular);
   font-weight: 600;
   font-size: 18px;
   border-radius: 32px;
@@ -519,6 +531,24 @@ header {
   border-radius: 32px;
 }
 
+.find-form {
+  padding: 42px 57px;
+  background-color: var(--color-brand-dark);
+  color: var(--color-icon-regular);
+  border-radius: 32px;
+}
+
+.form-field.find {
+  color: var(--color-form-regular);
+  max-width: 310px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.form-field.button.find {
+  margin-bottom: 8px;
+}
+
 /* FOOTER SECTION */
 
 .footer-section {
@@ -639,8 +669,11 @@ footer::after {
   height: 100%;
   max-width: 723px;
   max-height: 681px;
+  padding: 42px 144px;
   background-color: #011c44;
   border-radius: 48px;
+  color: var(--color-icon-regular);
+  overflow-y: auto;
 }
 
 .close-modal-button {
@@ -649,4 +682,103 @@ footer::after {
   top: 42px;
 }
 
-/* Встановлено модальне вікно та його першочерговий функціонал */
+.title-modal {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.15;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-form-uptext {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.17;
+  max-width: 280px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-form-downtext-accent {
+  color: var(--color-brand-light);
+}
+
+/* Form */
+
+.form-field {
+  color: var(--color-form-regular);
+  max-width: 310px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 18px 32.8px;
+  width: 100%;
+  border: 2px solid var(--color-form-regular);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-icon-regular);
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+
+.form-input:focus {
+  background-color: var(--color-form-regular);
+  outline: none;
+  color: var(--color-icon-regular);
+}
+
+.form-input::placeholder {
+  color: var(--color-icon-regular);
+}
+
+.form-field.button {
+  max-width: 295px;
+}
+
+.form-submit-button {
+  color: var(--color-icon-regular);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 32px;
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light); /* Додаємо видимі границі кнопки */
+  cursor: pointer; /* Строка відповідає за відображення курсору при наведенні */
+  padding: 16px 32px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.form-submit-button:hover {
+  background-color: transparent;
+}
+
+.modal-confidential {
+  text-decoration: none;
+}
+
+.modal-form-downtext {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-form-regular);
+  margin-bottom: 0;
+}
+
+.confidencial-link {
+  color: var(--color-form-regular);
+  text-underline-offset: 1px; /*  */
+}
