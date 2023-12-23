@@ -158,14 +158,29 @@
             </div>
             <div class="flex-container-about-images">
               <img
+                class="star mid"
+                src="./images/star-mid.png"
+                alt=""
+              />
+              <img
                 class="flex-container-about-images-item fst"
                 src="./images/before.png"
                 alt="До процедур"
               />
               <img
+                class="star large"
+                src="./images/star-large.png"
+                alt=""
+              />
+              <img
                 class="flex-container-about-images-item"
                 src="./images/after.png"
                 alt="Після процедур"
+              />
+              <img
+                class="star small"
+                src="./images/star-small.png"
+                alt=""
               />
             </div>
           </div>
@@ -248,6 +263,10 @@
               </button>
               <ul class="procedures-section-cardlist">
                 <li class="procedures-section-card">
+                  <p class="procedure-card-text">
+                    Маски <br />
+                    для обличчя
+                  </p>
                   <img
                     class="procedure-image"
                     src="./images/procedure-1.jpg"
@@ -255,6 +274,9 @@
                   />
                 </li>
                 <li class="procedures-section-card">
+                  <p class="procedure-card-text">
+                    Ін'єкції краси
+                  </p>
                   <img
                     class="procedure-image"
                     src="./images/procedure-2.jpg"
@@ -262,6 +284,9 @@
                   />
                 </li>
                 <li class="procedures-section-card">
+                  <p class="procedure-card-text">
+                    Пілінг шкіри
+                  </p>
                   <img
                     class="procedure-image"
                     src="./images/procedure-3.jpg"
@@ -309,11 +334,7 @@
                   >
                   та отримайте подарунок
                 </p>
-                <form
-                  name="call-order"
-                  autocomplete="off"
-                  novalidate
-                >
+                <form name="call-order" autocomplete="off">
                   <div class="form-field find">
                     <label
                       class="form-label visually-hidden"
@@ -327,6 +348,9 @@
                       id="user-name"
                       name="user-name"
                       placeholder="Ваше ім'я та прізвище"
+                      required
+                      minlength="2"
+                      maxlength="20"
                     />
                   </div>
                   <div class="form-field find">
@@ -342,6 +366,9 @@
                       id="user-phone"
                       name="user-phone"
                       placeholder="Ваш номер телефону"
+                      required
+                      min="10"
+                      max="12"
                     />
                   </div>
                   <div class="form-field find">
@@ -527,11 +554,7 @@
           та отримайте подарунок
         </p>
         <!-- Створюємо форму, яка буде поєднувати у собі елементи <input>&<label> -->
-        <form
-          name="call-order"
-          autocomplete="off"
-          novalidate
-        >
+        <form name="call-order" autocomplete="off">
           <div class="form-field">
             <!-- Label використовується задля зчитування браузером
             зараз цей семантичний елемент приховано за допомогою класу .visually-hidden -->
@@ -549,6 +572,9 @@
               id="user-name"
               name="user-name"
               placeholder="Ваше ім'я та прізвище"
+              required
+              minlength="2"
+              maxlength="20"
             />
           </div>
           <div class="form-field">
@@ -564,6 +590,9 @@
               id="user-phone"
               name="user-phone"
               placeholder="Ваш номер телефону"
+              required
+              min="10"
+              max="12"
             />
           </div>
           <div class="form-field">

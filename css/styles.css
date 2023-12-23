@@ -374,14 +374,44 @@ header {
 
 .flex-container-about-images {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-around;
   gap: 40px;
 }
 
 .flex-container-about-images-item {
+  position: relative;
   box-shadow: 0px 4px 4px 0px #a8c6f533;
   border-radius: 164px;
+}
+
+.flex-container-about-images-item.fst {
+  position: relative;
+  right: 176px;
+}
+
+.star {
+  position: absolute;
+}
+
+.star.mid {
+  top: 32px;
+  right: -20px;
+}
+
+.star.large {
+  width: 64px;
+  height: 64px;
+  top: 336px;
+  right: 294.5px;
+}
+
+.star.small {
+  width: 16px;
+  height: 16px;
+  top: 269px;
+  right: 5.92px;
 }
 
 /* WHY SECTION */
@@ -465,16 +495,25 @@ header {
     #011c44 101.39%
   );
   border-radius: 4px 120px 4px 120px;
-  transition: transform 0.3s;
-}
-
-.procedures-section-card:hover {
-  transform: scale(1.025);
+  transition: border 0.3s;
+  cursor: pointer;
 }
 
 .procedure-image {
-  position: relative;
+  position: absolute;
   border-radius: 4px 120px 4px 120px;
+  z-index: -1;
+}
+
+.procedure-card-text {
+  text-align: center;
+  position: absolute;
+  max-width: 152px;
+  bottom: 32px;
+  right: 115px;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 0;
 }
 
 /* Carousel buttons */
@@ -716,6 +755,7 @@ footer::after {
 .form-field {
   color: var(--color-form-regular);
   max-width: 310px;
+  max-height: 52px;
   margin: 0 auto; /* Задаємо вирівнювання для усіх елементів форми */
   margin-bottom: 24px;
 }
