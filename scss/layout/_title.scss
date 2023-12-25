@@ -1,0 +1,70 @@
+/* TITLE SECTION */
+/* Додаємо фонове зображення до обраної секції */
+/* .container.herotitle {
+  background-image: url("../images/header_title_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+.container.herotitle {
+    padding-left: 130px;
+}
+
+.title-section {
+    padding-top: 16px;
+    padding-bottom: 126.48px;
+    /* Загальний відступ для секції "Title" від секції "About" */
+}
+
+/* Uptext */
+.title-section-uptext {
+    /* Відступ між uptext та herotitle */
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+/* Hero Title */
+.title-section-herotitle {
+    /* Налаштування Заголовку */
+    font-family: play, sans-serif;
+    font-size: 140px;
+    text-transform: capitalize;
+    color: var(--color-brand-light);
+    line-height: 0.8;
+    margin-bottom: 40px;
+    max-width: 529px;
+}
+
+/* Button */
+.title-section-button {
+    color: var(--color-icon-regular);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 32px;
+    background-color: var(--color-brand-light);
+    border: 2px solid var(--color-brand-light);
+    /* Додаємо видимі границі кнопки */
+    cursor: pointer;
+    /* Строка відповідає за відображення курсору при наведенні */
+    padding: 16px 32px;
+    margin-bottom: 14px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.title-section-button:hover {
+    /* Налаштування кнопки при наведенні курсору */
+    color: var(--color-brand-dark);
+    background-color: transparent;
+}
+
+/* Downtext */
+.title-section-downtext {
+    font-size: 12px;
+    max-width: 238px;
+    text-align: center;
+    /* Вирівнювання тексту у межах свого елементу */
+    margin-bottom: 0;
+}

@@ -1,0 +1,87 @@
+/* ABOUT SECTION */
+.about-section {
+    padding-bottom: 176px;
+}
+
+.flex-container-about {
+    display: flex;
+    justify-content: space-between;
+    /* Розташування об'єктів за принципом пустого місця між ними */
+    gap: 32px;
+}
+
+/* Text obj */
+.flex-container-about-text {
+    display: flex;
+    flex-direction: column;
+    /* Напрямок розташування (у стовпчик) об'єктів у флекс контейнері */
+}
+
+.section-title.about {
+    /* Унікальні налаштування для заголовку зі зміщення вліво*/
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 41px;
+    max-width: 529px;
+}
+
+.about-section-text {
+    font-size: 22px;
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.about-section-text:last-child {
+    margin-bottom: 0;
+}
+
+.about-section-text-accent {
+    /* Налаштування акценту */
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Image obj */
+.flex-container-about-images {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.flex-container-about-images-item {
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.2);
+    border-radius: 164px;
+}
+
+.flex-container-about-images-item.fst {
+    position: relative;
+    right: 176px;
+}
+
+.star {
+    position: absolute;
+}
+
+.star.mid {
+    top: 32px;
+    right: -20px;
+}
+
+.star.large {
+    width: 64px;
+    height: 64px;
+    top: 336px;
+    right: 294.5px;
+}
+
+.star.small {
+    width: 16px;
+    height: 16px;
+    top: 269px;
+    right: 5.92px;
+}

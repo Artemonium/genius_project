@@ -1,0 +1,97 @@
+/* FOOTER SECTION */
+.footer-section {
+    padding: 56px 0;
+    background-color: var(--color-brand-dark);
+}
+
+.container.footer {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo-navigation {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+
+.footer-nav-list {
+    flex-basis: 50%;
+    /*  Задаємо місце, яке буде займати даний об'єкт у межах
+  батьківського флекс-боксу */
+}
+
+.footer-nav-list-item {
+    line-height: 1;
+}
+
+.footer-nav-list-item.contacts {
+    margin-bottom: 0;
+}
+
+.footer-logo {
+    flex-basis: 50%;
+}
+
+.footer-logo-text {
+    max-width: 84px;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-brand-light);
+}
+
+.address-footer-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-icons.footer {
+    fill: var(--color-icon-regular);
+}
+
+.footer-address-confidential {
+    display: flex;
+    flex-basis: 50%;
+    gap: 186px;
+}
+
+.address-footer {
+    flex-basis: 50%;
+}
+
+.footer-confidencial {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #747272;
+    margin-bottom: 0;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    /* Точка відносно якої буде відбуватися позиционування
+  наступного елементу (footer::after) */
+    max-width: 1488px;
+    margin: auto;
+}
+
+footer::after {
+    /* Додаємо в кінець футеру зображення із засобами для догляду */
+    content: "";
+    width: 247px;
+    height: 152px;
+    position: absolute;
+    /* дозволяє вийняти контент з контексту та рухати
+  його відносно найближчого єлемента з відображенням, що не є static */
+    background-image: url(../images/chemicals.png);
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: -56px;
+    /* Зміщення відбувається через наявність паддінгів у секції футеру */
+}

@@ -1,0 +1,28 @@
+/* FIND SECTION */
+.flex-container-find {
+    padding-bottom: 96px;
+}
+
+.container-find {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.find-section-map {
+    border-radius: 32px;
+}
+
+.find-form {
+    padding: 48px 57px;
+    background-color: var(--color-brand-dark);
+    color: var(--color-icon-regular);
+    border-radius: 32px;
+}
+
+.form-field.find {
+    color: var(--color-form-regular);
+    max-width: 310px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}

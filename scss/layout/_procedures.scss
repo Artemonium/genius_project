@@ -1,0 +1,92 @@
+/* PROCEDURES SECTION */
+.flex-container-procedures {
+    padding-bottom: 96px;
+}
+
+.procedures-section-cardlist {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* Налаштовує перенесення контенту при доданні нового,
+  або при звуження в'юбоксу */
+}
+
+.procedures-section-card {
+    display: flex;
+    position: relative;
+    width: 344px;
+    height: 456px;
+    flex-basis: calc((100% - 32px) / 3);
+    /* Поділяє наявну ширину флекс-боксу на 
+  ти рівнозначні частини, де 32px - це автоматичні маржини по 16px з двох сторін */
+    /* Задає градієнт із прозорістю, що визначається дизайнером */
+    background: linear-gradient(180.05deg, rgba(1, 28, 68, 0) 48.53%, rgba(1, 28, 68, 0.725825) 84.61%, #011c44 101.39%);
+    border-radius: 4px 120px 4px 120px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.procedures-section-card:hover {
+    transform: scale(1.05);
+}
+
+.procedure-image {
+    position: absolute;
+    border-radius: 4px 120px 4px 120px;
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.procedure-image:hover {
+    transform: scale(1.05);
+}
+
+.procedure-card-text {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+
+}
+
+// Carousel buttons 
+
+.carousel-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    /* Округлює будь-який елемент */
+    border: 1px solid var(--color-brand-dark);
+    fill: var(--color-brand-dark);
+    /* Змінює колір заливки SVG-елементу */
+    background-color: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.carousel-button:last-child {
+    transform: rotate(0.5turn);
+}
+
+.carousel-button:hover {
+    border-color: white;
+    background-color: var(--color-brand-light);
+    fill: white;
+}
