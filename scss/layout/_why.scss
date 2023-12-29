@@ -1,37 +1,31 @@
-/* WHY SECTION */
-.flex-container-why {
+.why-section {
+  &__flex {
     display: flex;
     flex-direction: column;
     margin-bottom: 96px;
-}
+  }
 
-.flex-container-why-title {
+  &__title-container {
     display: flex;
     justify-content: center;
-}
+  }
 
-.section-title.why {
-    max-width: 450px;
-    /* Довжина задається для того, аби уникати зайвих тегів <br> у 
-  html-коді */
-}
-
-.flex-container-why-text {
+  &__cards-container {
     display: flex;
     flex-grow: 1;
     /* Якщо немає інших елементів, то задає ширину області, що він займає
   у розмірі 100% */
     justify-content: space-around;
-}
+  }
 
-.why-section-cardlist {
+  &__cardlist {
     display: flex;
     flex-wrap: wrap;
     gap: 56px;
     justify-content: center;
-}
+  }
 
-.why-section-card {
+  &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,14 +33,22 @@
     flex-basis: 316px;
     border-radius: 32px;
     padding: 24px 32px;
-    box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.3803921569);
-}
+    box-shadow: 0px 4px 4px 0px
+      rgba(168, 198, 245, 0.3803921569);
+  }
 
-.why-section-card-text {
+  &__card-text {
     text-align: center;
     margin-bottom: 0;
+  }
+
+  &____card-image {
+    margin-bottom: 8px;
+  }
 }
 
-.why-section-card-image {
-    margin-bottom: 8px;
+.section-title.why {
+  max-width: 450px;
+  /* Довжина задається для того, аби уникати зайвих тегів <br> у 
+  html-коді */
 }

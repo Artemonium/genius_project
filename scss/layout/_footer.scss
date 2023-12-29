@@ -1,87 +1,91 @@
 /* FOOTER SECTION */
 .footer-section {
-    padding: 56px 0;
-    background-color: var(--color-brand-dark);
-}
+  padding: 56px 0;
+  background-color: var(--color-brand-dark);
 
-.container.footer {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-logo-navigation {
+  &__logo-navigation {
     display: flex;
     flex-basis: 50%;
     gap: 20px;
-}
+  }
 
-.footer-nav-list {
+  &__nav-list {
     flex-basis: 50%;
-    /*  Задаємо місце, яке буде займати даний об'єкт у межах
-  батьківського флекс-боксу */
-}
+  }
 
-.footer-nav-list-item {
-    line-height: 1;
-}
-
-.footer-nav-list-item.contacts {
-    margin-bottom: 0;
-}
-
-.footer-logo {
-    flex-basis: 50%;
-}
-
-.footer-logo-text {
+  &__logo-text {
     max-width: 84px;
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: var(--color-brand-light);
-}
+  }
 
-.address-footer-icons {
-    display: flex;
-    gap: 24px;
-}
+  &__nav-list-item {
+    line-height: 1;
+  }
 
-.nav-icons.footer {
-    fill: var(--color-icon-regular);
-}
+  &__item-text {
+    /* Налаштування елементів списку у футері */
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 16px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    &:hover {
+      color: var(--color-brand-light);
+    }
+  }
 
-.footer-address-confidential {
+  &__logo {
+    flex-basis: 50%;
+  }
+
+  &__address-confidential {
     display: flex;
     flex-basis: 50%;
     gap: 186px;
-}
+  }
 
-.address-footer {
-    flex-basis: 50%;
-}
+  &__nav-icons {
+    fill: var(--color-icon-regular);
+  }
 
-.footer-confidencial {
+  &__address-icons {
     display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-}
+    gap: 24px;
+  }
 
-.copyright {
+  &__copyright {
     font-size: 13px;
     color: #747272;
     margin-bottom: 0;
+  }
+
+  &__confidencial {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+}
+
+.container.footer {
+  display: flex;
+  gap: 20px;
 }
 
 footer {
-    display: flex;
-    position: relative;
-    /* Точка відносно якої буде відбуватися позиционування
+  display: flex;
+  position: relative;
+  /* Точка відносно якої буде відбуватися позиционування
   наступного елементу (footer::after) */
-    max-width: 1488px;
-    margin: auto;
-}
-
-footer::after {
+  max-width: 1488px;
+  margin: auto;
+  &::after {
     /* Додаємо в кінець футеру зображення із засобами для догляду */
     content: "";
     width: 247px;
@@ -94,4 +98,5 @@ footer::after {
     right: 0;
     bottom: -56px;
     /* Зміщення відбувається через наявність паддінгів у секції футеру */
+  }
 }

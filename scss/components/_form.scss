@@ -1,22 +1,23 @@
 /* Form */
-.form-field {
+.form {
+  max-width: 295px;
+  margin-bottom: 8px;
+  &__field {
     color: var(--color-form-regular);
     max-width: 310px;
     max-height: 52px;
     margin: 0 auto;
     /* Задаємо вирівнювання для усіх елементів форми */
     margin-bottom: 24px;
-}
+    &--button {
+      margin-bottom: 8px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-.form-field:last-child {
-    margin-bottom: 0;
-}
-
-.form-label {
-    display: block;
-}
-
-.form-input {
+  &__input {
     padding: 18px 32.85px;
     width: 100%;
     border: 2px solid var(--color-form-regular);
@@ -25,28 +26,21 @@
     color: var(--color-icon-regular);
     font-family: "Roboto", sans-serif;
     font-size: 13px;
-}
 
-.form-input:focus {
-    background-color: var(--color-form-regular);
-    outline: none;
-    color: var(--color-icon-regular);
-}
+    &:focus {
+      background-color: var(--color-form-regular);
+      outline: none;
+      color: var(--color-icon-regular);
+    }
+    &::placeholder {
+      color: var(--color-icon-regular);
+    }
+    ::-moz-placeholder {
+      color: var(--color-icon-regular);
+    }
+  }
 
-.form-input::-moz-placeholder {
-    color: var(--color-icon-regular);
-}
-
-.form-input::placeholder {
-    color: var(--color-icon-regular);
-}
-
-.form-field.button {
-    max-width: 295px;
-    margin-bottom: 8px;
-}
-
-.form-submit-button {
+  &__submit-button {
     color: var(--color-icon-regular);
     font-weight: 600;
     font-size: 18px;
@@ -59,26 +53,22 @@
     padding: 16px 32px;
     transition-property: background-color;
     transition-duration: 0.2s;
-}
+    &:hover {
+      background-color: transparent;
+    }
+  }
 
-.form-submit-button:hover {
-    background-color: transparent;
-}
+  &__confidencial-link {
+    color: var(--color-form-regular);
+    text-underline-offset: 1px;
+    /*  */
+  }
 
-.modal-confidential {
-    text-decoration: none;
-}
-
-.modal-form-downtext {
+  &__modal-form-downtext {
     text-align: center;
     font-size: 12px;
     line-height: 1.5;
     color: var(--color-form-regular);
     margin-bottom: 0;
-}
-
-.confidencial-link {
-    color: var(--color-form-regular);
-    text-underline-offset: 1px;
-    /*  */
+  }
 }
