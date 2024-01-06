@@ -23,7 +23,7 @@
         <nav class="header__navigation">
           <!-- Додаємо логотип як окремий елемент без переліку -->
           <img
-            class="header-logo"
+            class="header__logo"
             src="./images/logo.svg"
             alt="BeautyZone"
           />
@@ -93,6 +93,20 @@
               </svg>
             </li>
           </ul>
+          <button
+            type="button"
+            class="header__burger-button"
+          >
+            <svg
+              class="footer-section__nav-icons"
+              width="20"
+              height="14"
+            >
+              <use
+                href="./images/icons.svg#burger-menu"
+              ></use>
+            </svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -123,14 +137,12 @@
         </div>
       </section>
       <!-- Секція про компанію -->
-      <section class="about-section">
+      <!-- <section class="about-section">
         <div class="container">
           <div class="about-section__flex">
-            <!-- Поділяємо на контейнери текст зліва та зображення - справа -->
             <div class="about-section__text-list">
               <h2 class="section-title about" id="about">
                 Перевтілюйтесь в
-                <!-- Використовуємо <span> для вибіркового форматування акцентів -->
                 <span class="section-title-accent"
                   >Beauty Zone!</span
                 >
@@ -181,9 +193,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Секція "Чому люди обирають нас" -->
-      <section class="why-section">
+      <!-- <section class="why-section">
         <div class="container">
           <div class="why-section__flex">
             <div class="why-section__title-container">
@@ -195,7 +207,6 @@
               </h2>
             </div>
             <div class="why-section__cards-container">
-              <!-- Список з подібними елементами -->
               <ul class="why-section__cardlist">
                 <li class="why-section__card">
                   <img
@@ -235,9 +246,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Секція "Наші процедури" -->
-      <section class="procedures-section">
+      <!-- <section class="procedures-section">
         <div class="container">
           <div class="procedures-section__flex-container">
             <h2
@@ -306,9 +317,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Секція "Як нас знайти" -->
-      <section class="find-section">
+      <!-- <section class="find-section">
         <div class="container">
           <div class="find-section__flex">
             <h2 class="section-title find" id="find">
@@ -337,19 +348,14 @@
                   >
                   та отримайте подарунок
                 </p>
-                <!-- Створюємо форму, яка буде поєднувати у собі елементи <input>&<label> -->
                 <form name="call-order" autocomplete="off">
                   <div class="form__field">
-                    <!-- Label використовується задля зчитування браузером
-            зараз цей семантичний елемент приховано за допомогою класу .visually-hidden -->
                     <label
                       class="form__label visually-hidden"
                       for="user-name"
                     >
                       Ваше ім'я та прізвище</label
                     >
-                    <!-- Input створює поле для заповнення з відповідним наповненням, 
-            що задається через атрибут type та поєднується з <label> за допомогою id -->
                     <input
                       class="form__input"
                       type="text"
@@ -417,19 +423,16 @@
                   </div>
                 </form>
               </div>
-              <!-- Місце під форму для заповнення -->
             </div>
-            <!-- Вбудована карта з Google Maps -->
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Виділяємо аналогічно до header'у нижню частину сайту -->
-    <section class="footer-section">
+    <!-- <section class="footer-section">
       <footer class="footer">
         <div class="container footer">
           <nav class="footer-section__logo-navigation">
-            <!-- Лого та посилання у футері -->
             <div class="footer-section__logo">
               <span class="footer-section__logo-text"
                 >Beauty <br />
@@ -498,7 +501,6 @@
               </ul>
               <ul class="footer-section__address-icons">
                 <li class="footer-address-list-icon">
-                  <!-- Додаємо іконку з набору svg-іконок, що були створені за допомогою відповідного сервісу -->
                   <svg
                     class="footer-section__nav-icons"
                     width="42"
@@ -547,7 +549,7 @@
           </div>
         </div>
       </footer>
-    </section>
+    </section> -->
     <!-- Додаткова секція для модального вікна -->
     <div class="backdrop backdrop--is-hidden">
       <div class="backdrop__modal">
