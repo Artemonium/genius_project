@@ -8,6 +8,41 @@
   transform: translateX(+100%);
   transition: transform 0.3s;
 
+  &__button-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background-color: var(--color-brand-light);
+    border: transparent;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__button-image {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-left: 20px;
+  }
+
+  &__logo {
+    width: 57px;
+    height: 30px;
+    margin-bottom: 32px;
+  }
+
+  &__list-images {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
   &.is-open {
     transform: translateX(0);
   }

@@ -8,6 +8,8 @@
   &__title-container {
     display: flex;
     justify-content: center;
+    @media screen and (min-width: $bp-tablet) {
+    }
   }
 
   &__cards-container {
@@ -21,8 +23,14 @@
   &__cardlist {
     display: flex;
     flex-wrap: wrap;
-    gap: 56px;
+    gap: 16px;
     justify-content: center;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 56px;
+      justify-content: center;
+    }
   }
 
   &__card {
@@ -48,7 +56,14 @@
 }
 
 .section-title.why {
-  max-width: 450px;
-  /* Довжина задається для того, аби уникати зайвих тегів <br> у 
+  font-size: 32px;
+  max-width: 225px;
+  margin-bottom: 24px;
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    max-width: 450px;
+    margin-bottom: 48px;
+    /* Довжина задається для того, аби уникати зайвих тегів <br> у 
   html-коді */
+  }
 }

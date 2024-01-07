@@ -112,8 +112,85 @@
               type="button"
               class="mobile-menu__button-close menu-btn-close"
             >
-              Close
+              <img
+                class="mobile-menu__button-image"
+                src="./images/cross.png"
+                alt="close the window"
+              />
             </button>
+            <div class="mobile-menu__items">
+              <img
+                class="mobile-menu__logo"
+                src="./images/logo.svg"
+                alt="BeautyZone"
+              />
+              <ul class="mobile-menu__itemlist">
+                <li>
+                  <a
+                    class="header__nav-list-item-text"
+                    href="#about"
+                    >Про нас</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="header__nav-list-item-text"
+                    href="#why"
+                    >Чому ми</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="header__nav-list-item-text"
+                    href="#procedures"
+                    >Наші процедури</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="header__nav-list-item-text"
+                    href="#find"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+              <!-- Виділяємо зображення у окремий клас для зручного керування -->
+              <ul class="mobile-menu__list-images">
+                <li>
+                  <svg
+                    class="header__nav-icons"
+                    width="32"
+                    height="32"
+                  >
+                    <use
+                      href="./images/icons.svg#phone"
+                    ></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    class="header__nav-icons"
+                    width="32"
+                    height="32"
+                  >
+                    <use
+                      href="./images/icons.svg#facebook"
+                    ></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    class="header__nav-icons"
+                    width="32"
+                    height="32"
+                  >
+                    <use
+                      href="./images/icons.svg#instagram"
+                    ></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -145,7 +222,7 @@
         </div>
       </section>
       <!-- Секція про компанію -->
-      <!-- <section class="about-section">
+      <section class="about-section">
         <div class="container">
           <div class="about-section__flex">
             <div class="about-section__text-list">
@@ -201,9 +278,9 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Секція "Чому люди обирають нас" -->
-      <!-- <section class="why-section">
+      <section class="why-section">
         <div class="container">
           <div class="why-section__flex">
             <div class="why-section__title-container">
@@ -254,7 +331,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Секція "Наші процедури" -->
       <!-- <section class="procedures-section">
         <div class="container">

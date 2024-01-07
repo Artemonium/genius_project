@@ -1,27 +1,51 @@
 /* ABOUT SECTION */
 .about-section {
-  padding-bottom: 176px;
+  padding-bottom: 104px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 176px;
+  }
 
   &__flex {
-    display: flex;
-    justify-content: space-between;
-    /* Розташування об'єктів за принципом пустого місця між ними */
-    gap: 32px;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      justify-content: space-between;
+      /* Розташування об'єктів за принципом пустого місця між ними */
+      gap: 32px;
+    }
   }
 
   &__text-list {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* Напрямок розташування (у стовпчик) об'єктів у флекс контейнері */
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      /* Напрямок розташування (у стовпчик) об'єктів у флекс контейнері */
+    }
   }
 
   &__text {
-    font-size: 22px;
-    max-width: 700px;
-    line-height: 1.7;
-    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 16px;
     &:last-child {
       margin-bottom: 0;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+      max-width: 700px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -39,40 +63,69 @@
   }
 
   &__images-item {
-    position: relative;
-    box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.2);
-    border-radius: 164px;
-    &--first {
-      right: 176px;
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      position: relative;
+      box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.2);
+      border-radius: 164px;
+      &--first {
+        right: 176px;
+      }
     }
   }
 
   &__star {
     position: absolute;
     &--small {
-      width: 16px;
-      height: 16px;
-      top: 269px;
-      right: 5.92px;
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        width: 16px;
+        height: 16px;
+        top: 269px;
+        right: 5.92px;
+      }
     }
     &--mid {
-      top: 32px;
-      right: -20px;
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        top: 684px;
+        left: 283px;
+      }
     }
+
     &--large {
-      width: 64px;
-      height: 64px;
-      top: 336px;
-      right: 294.5px;
+      width: 40px;
+      height: 40px;
+      bottom: -46px;
+      right: 0px;
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 64px;
+        height: 64px;
+        top: 336px;
+        right: 294.5px;
+      }
     }
   }
 }
 
 .section-title.about {
-  /* Унікальні налаштування для заголовку зі зміщення вліво*/
   line-height: 1.2;
   text-align: left;
-  margin-bottom: 40px;
-  margin-top: 41px;
-  max-width: 529px;
+  font-size: 32px;
+  max-width: 264px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    /* Унікальні налаштування для заголовку зі зміщення вліво*/
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 41px;
+    max-width: 529px;
+  }
 }

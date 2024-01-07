@@ -2,20 +2,24 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media screen and (min-width: $bp-desktop) {
+  @media screen and (min-width: $bp-tablet) {
     display: block;
     padding-left: 130px;
   }
 }
 
 .title-section {
-  padding-top: 16px;
-  padding-bottom: 126.48px;
+  padding-top: 0px;
+  padding-bottom: 56px;
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 16px;
+    padding-bottom: 126.48px;
+  }
 
   &__uptext {
     font-size: 12px;
     margin-bottom: 0;
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       /* Відступ між uptext та herotitle */
       margin-bottom: 16px;
       margin-top: 0;
@@ -32,7 +36,7 @@
     line-height: 0.8;
     margin-bottom: 32px;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       /* Налаштування Заголовку */
       text-align: left;
       font-size: 140px;
@@ -57,7 +61,7 @@
     transition-duration: 0.2s;
     transition-property: background-color;
     transition-duration: 0.2s;
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       font-size: 18px;
       border-radius: 32px;
       /* Додаємо видимі границі кнопки */
@@ -77,7 +81,7 @@
     text-align: center;
     font-size: 11px;
     max-width: 238px;
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       font-size: 12px;
       /* Вирівнювання тексту у межах свого елементу */
       margin-bottom: 0;

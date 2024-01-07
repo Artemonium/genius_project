@@ -4,11 +4,11 @@
   left: 0;
 
   &__navigation::before {
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       content: "";
-      width: 100%;
+      width: 1440px;
       height: 106px;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       background: rgba(255, 255, 255, 0.2509803922);
@@ -28,7 +28,7 @@
     padding-top: 15px;
     padding-bottom: 25px;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       position: relative;
       align-items: center;
@@ -39,12 +39,25 @@
     }
   }
 
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        56.68deg,
+        #ffffff 20.92%,
+        rgba(255, 255, 255, 0.78) 44.46%,
+        rgba(255, 255, 255, 0.2) 58.9%,
+        rgba(255, 255, 255, 0) 72.45%
+      ),
+      url("/images/header_title_bg@2x.png");
+  }
+
   &__navigation::after {
     content: "";
     width: 600px;
     height: 345px;
     background-size: contain;
-    position: fixed;
+    position: absolute;
     background-image: linear-gradient(
         56.68deg,
         #ffffff 20.92%,
@@ -58,7 +71,7 @@
     right: -132px;
     z-index: -10;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       content: "";
       width: 100%;
       height: 100%;
@@ -84,7 +97,7 @@
     max-width: 57px;
     max-height: 30px;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       max-width: 74px;
       max-height: 42px;
     }
@@ -94,7 +107,7 @@
     display: none;
     // Для адаптивності (мобільної версії) відтворюємо меню
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       align-items: center;
       /* Вирівнюємо контент відносно верху і низу контейнеру */
@@ -113,17 +126,22 @@
     font-style: normal;
     /* Прибираємо нахилений (italic) стиль шрифту */
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.2;
     color: var(--color-brand-dark);
     transition-property: color;
     transition-duration: 0.2s;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+    }
   }
 
   &__nav-list-images {
     display: none;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -139,7 +157,7 @@
     border: transparent;
     background-color: transparent;
 
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-tablet) {
       display: none;
     }
   }
