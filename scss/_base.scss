@@ -8,13 +8,16 @@
 .container {
   /* Налаштування контейнерів які містять у собі весь контент сайту */
   width: 100%;
+  position: relative;
   /* Базова ширина 1240px +2 padding по 24px зліва і справа 1240+48=1288px */
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
+  z-index: auto;
 }
 
 body {
+  // overflow-x: hidden;
   width: 100%;
   font-family: "Roboto", sans-serif;
   /* Налаштування базового шрифта сторінки */

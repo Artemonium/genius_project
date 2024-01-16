@@ -1,14 +1,16 @@
 .header {
-  width: 100%;
+
   top: 0;
   left: 0;
 
   &__navigation::before {
-    @media screen and (min-width: $bp-tablet) {
+    /* Ставимо шарування перед фоновим зображенням */
+    @media screen and (min-width: $bp-desktop) {
       content: "";
-      width: 1440px;
+      width: 108.1%;
       height: 106px;
       position: absolute;
+      background-size: contain;
       top: 0;
       left: 0;
       background: rgba(255, 255, 255, 0.2509803922);
@@ -23,12 +25,13 @@
 
   &__navigation {
     display: flex;
+    flex-basis: 100%;
     justify-content: space-between;
     align-items: center;
     padding-top: 15px;
     padding-bottom: 25px;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       display: flex;
       position: relative;
       align-items: center;
@@ -39,18 +42,6 @@
     }
   }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        56.68deg,
-        #ffffff 20.92%,
-        rgba(255, 255, 255, 0.78) 44.46%,
-        rgba(255, 255, 255, 0.2) 58.9%,
-        rgba(255, 255, 255, 0) 72.45%
-      ),
-      url("/images/header_title_bg@2x.png");
-  }
 
   &__navigation::after {
     content: "";
@@ -67,14 +58,14 @@
       ),
       url("/images/header_title_bg.png");
     background-repeat: no-repeat;
-    top: -47.7px;
-    right: -132px;
-    z-index: -10;
+    background-position-x: 135px;
+    top: -50px;
+    right: 0;
+    z-index: -1;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       content: "";
-      width: 100%;
-      height: 100%;
+
       width: 1129px;
       height: 633px;
       position: absolute;
@@ -87,6 +78,7 @@
         ),
         url("/images/header_title_bg.png");
       background-repeat: no-repeat;
+      background-position-x: 0px;
       top: 0;
       right: -100px;
       z-index: -10;
@@ -97,7 +89,7 @@
     max-width: 57px;
     max-height: 30px;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       max-width: 74px;
       max-height: 42px;
     }
@@ -107,7 +99,7 @@
     display: none;
     // Для адаптивності (мобільної версії) відтворюємо меню
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       display: flex;
       align-items: center;
       /* Вирівнюємо контент відносно верху і низу контейнеру */
@@ -133,7 +125,7 @@
     transition-duration: 0.2s;
     margin-bottom: 16px;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       font-size: 18px;
     }
   }
@@ -141,7 +133,7 @@
   &__nav-list-images {
     display: none;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -157,7 +149,7 @@
     border: transparent;
     background-color: transparent;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       display: none;
     }
   }
