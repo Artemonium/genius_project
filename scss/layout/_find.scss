@@ -4,23 +4,59 @@
     padding-bottom: 96px;
   }
 
-  &__content {
+  &__title-container {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    @media screen and (min-width: $bp-desktop) {
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
   }
 
   &__map {
+    display: none;
     border-radius: 32px;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
+  }
+
+  &__map-adaptive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    margin-top: 24px;
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
+
+    }
   }
 
   &__form {
-    max-height: 482px;
-    padding: 48px 57px;
+    max-height: 434px;
+    max-width: 320px;
+    padding: 42px 24px;
     background-color: var(--color-brand-dark);
     color: var(--color-icon-regular);
     border-radius: 32px;
-  }
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 423px;
+      min-height: 482px;
+      padding: 48px 57px;
+
+    }
 
   &__form-field {
     color: var(--color-form-regular);
@@ -28,4 +64,19 @@
     margin: 0 auto;
     margin-bottom: 16px;
   }
+}
+
+.section-title.find {
+  font-size: 32px;
+  max-width: 225px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    max-width: 450px;
+    margin-bottom: 48px;
+    /* Довжина задається для того, аби уникати зайвих тегів <br> у 
+  html-коді */
+  }
+}
 }

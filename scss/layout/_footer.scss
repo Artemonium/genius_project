@@ -5,8 +5,17 @@
 
   &__logo-navigation {
     display: flex;
-    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      flex-basis: 50%;
+      gap: 20px;
+    }
   }
 
   &__nav-list {
@@ -23,6 +32,17 @@
 
   &__nav-list-item {
     line-height: 1;
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      text-align: start;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      text-align: left;
+    }
   }
 
   &__item-text {
@@ -40,15 +60,32 @@
       color: var(--color-brand-light);
     }
   }
+  &__item-text.regular {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+
+  &__item-text.adaptive {
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
 
   &__logo {
     flex-basis: 50%;
   }
 
   &__address-confidential {
-    display: flex;
-    flex-basis: 50%;
-    gap: 186px;
+    // display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-basis: 50%;
+      gap: 186px;
+    }
   }
 
   &__nav-icons {
@@ -57,7 +94,13 @@
 
   &__address-icons {
     display: flex;
-    gap: 24px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 8px;
+    @media screen and (min-width: $bp-tablet) {
+      gap: 24px;
+      margin-bottom: 0;
+    }
   }
 
   &__copyright {
@@ -69,13 +112,31 @@
   &__confidencial {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    align-items: center;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-basis: 50%;
+      align-items: start;
+    }
+  }
+}
+
+.footer-adress-list {
+  display: none;
+  @media screen and (min-width: $bp-tablet) {
+    display: block;
   }
 }
 
 .container.footer {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 0px;
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 
 footer {
@@ -86,17 +147,21 @@ footer {
   max-width: 1488px;
   margin: auto;
   &::after {
-    /* Додаємо в кінець футеру зображення із засобами для догляду */
-    content: "";
-    width: 247px;
-    height: 152px;
-    position: absolute;
-    /* дозволяє вийняти контент з контексту та рухати
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      /* Додаємо в кінець футеру зображення із засобами для догляду */
+      content: "";
+      width: 247px;
+      height: 152px;
+      position: absolute;
+      /* дозволяє вийняти контент з контексту та рухати
   його відносно найближчого єлемента з відображенням, що не є static */
-    background-image: url(../images/chemicals.png);
-    background-repeat: no-repeat;
-    right: 0;
-    bottom: -56px;
-    /* Зміщення відбувається через наявність паддінгів у секції футеру */
+      background-image: url(../images/chemicals.png);
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: -56px;
+      /* Зміщення відбувається через наявність паддінгів у секції футеру */
+    }
   }
 }

@@ -3,12 +3,14 @@
   max-width: 295px;
   margin-bottom: 8px;
   &__field {
+    display: flex;
+    justify-content: center;
     color: var(--color-form-regular);
     max-width: 310px;
     max-height: 52px;
     margin: 0 auto;
     /* Задаємо вирівнювання для усіх елементів форми */
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     &--button {
       display: flex;
       justify-content: center;
@@ -17,17 +19,26 @@
     &:last-child {
       margin-bottom: 0;
     }
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 24px;
+    }
   }
 
   &__input {
-    padding: 18px 32.85px;
+    padding: 16px 24px;
     width: 100%;
+    max-width: 241px;
+    max-height: 46px;
     border: 2px solid var(--color-form-regular);
     border-radius: 32px;
     background-color: transparent;
     color: var(--color-icon-regular);
     font-family: "Roboto", sans-serif;
     font-size: 13px;
+    @media screen and (min-width: $bp-tablet) {
+      padding: 18px 32.85px;
+      max-width: 310px;
+    }
 
     &:focus {
       background-color: var(--color-form-regular);
@@ -45,18 +56,22 @@
   &__submit-button {
     color: var(--color-icon-regular);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 32px;
     background-color: var(--color-brand-light);
     border: 2px solid var(--color-brand-light);
     /* Додаємо видимі границі кнопки */
     cursor: pointer;
     /* Строка відповідає за відображення курсору при наведенні */
-    padding: 16px 32px;
+    padding: 12.5px 20px;
     transition-property: background-color;
     transition-duration: 0.2s;
     &:hover {
       background-color: transparent;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 32px;
+      font-size: 18px;
     }
   }
 

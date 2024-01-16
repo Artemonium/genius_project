@@ -5,6 +5,12 @@
     padding-bottom: 96px;
   }
 
+  &__title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__cardlist {
     display: flex;
     flex-grow: 1;
@@ -18,7 +24,6 @@
 
   &__card {
     display: flex;
-
     position: relative;
     width: 344px;
     height: 456px;
@@ -34,21 +39,22 @@
     border-radius: 4px 120px 4px 120px;
     transition: transform 0.3s;
     cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 
   &__image {
     display: flex;
     position: absolute;
+    border-radius: 4px 50px 4px 50px;
+    z-index: -1;
+    transition: transform 0.3s;
+    @media screen and (min-width: $bp-tablet) {
+
+    display: flex;
+    position: absolute;
     border-radius: 4px 120px 4px 120px;
     z-index: -1;
     transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
+  }}
 
   &__text {
     display: flex;
@@ -71,29 +77,45 @@
   flex-shrink: 0;
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    /* Округлює будь-який елемент */
-    border: 1px solid var(--color-brand-dark);
-    fill: var(--color-brand-dark);
-    /* Змінює колір заливки SVG-елементу */
-    background-color: transparent;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition-property: all;
-    transition-duration: 0.2s;
-    &:last-child {
-      transform: rotate(0.5turn);
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      /* Округлює будь-який елемент */
+      border: 1px solid var(--color-brand-dark);
+      fill: var(--color-brand-dark);
+      /* Змінює колір заливки SVG-елементу */
+      background-color: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition-property: all;
+      transition-duration: 0.2s;
+      &:last-child {
+        transform: rotate(0.5turn);
+      }
+      &:hover {
+        border-color: white;
+        background-color: var(--color-brand-light);
+        fill: white;
+      }
     }
-    &:hover {
-      border-color: white;
-      background-color: var(--color-brand-light);
-      fill: white;
-    }
+  }
+}
+
+.section-title.procedures {
+  font-size: 32px;
+  max-width: 225px;
+  margin-bottom: 24px;
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    max-width: 450px;
+    margin-bottom: 48px;
+    /* Довжина задається для того, аби уникати зайвих тегів <br> у 
+html-коді */
   }
 }
